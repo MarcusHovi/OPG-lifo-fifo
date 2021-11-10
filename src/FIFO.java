@@ -29,27 +29,29 @@ public class FIFO {
         tail++;
     }
 
-    public void pickUp(){
+    public String pickUp(){
 
-        if (head == buffer.length)
-            head = 0;
+
+
 
         if (head == tail) {
-            System.out.println("NO DATA");
+            return "NO DATA";
         }
-
         else {
+            if (head == buffer.length)
+                head = 0;
             String aux = buffer[head];
             buffer[head] = "";
             head++;
 
-            System.out.println(aux);
+            return aux;
         }
+
 
     }
 
-    public void printOutQueue() {
-        System.out.println(Arrays.toString(buffer));
+    public String toString() {
+        return Arrays.toString(buffer) + this.getHead() + " " + this.getTail();
     }
 
     public int getHead() {
