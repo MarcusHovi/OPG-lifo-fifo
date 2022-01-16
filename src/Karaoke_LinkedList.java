@@ -59,7 +59,7 @@ public class Karaoke_LinkedList {
         words = input.toString().split( " " );
 
         // size of buffer is same as number of words in txt file
-        fifo = new FIFO_LinkedList( words.length );
+        fifo = new FIFO_LinkedList();
 
         labelText = new JLabel( "Song", JLabel.CENTER );
         labelText.setHorizontalTextPosition( JLabel.CENTER );

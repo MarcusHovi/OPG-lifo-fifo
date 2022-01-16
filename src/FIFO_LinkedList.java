@@ -5,7 +5,7 @@ public class FIFO_LinkedList {
     private String status;
 
 
-    public FIFO_LinkedList( int size ) {
+    public FIFO_LinkedList( ) {
 
         buffer = new LinkedList_Str();
 
