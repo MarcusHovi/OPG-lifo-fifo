@@ -1,0 +1,30 @@
+Randomly sorted
+[n = 10 000]
+Tree sort: 3.3996105194091797 Porovnania: 23531 Priradenia: 12218
+Tree sort: 3.0214786529541016 Porovnania: 21793 Priradenia: 11339
+Tree sort: 3.0486583709716797 Porovnania: 21912 Priradenia: 11401
+Tree sort: 3.3538341522216797 Porovnania: 23040 Priradenia: 11971
+Tree sort: 3.0291080474853516 Porovnania: 20841 Priradenia: 10865
+
+[n = 100 000]
+Tree sort: 53.98297309875488 Porovnania: 330557 Priradenia: 169763
+Tree sort: 51.253318786621094 Porovnania: 317896 Priradenia: 163437
+Tree sort: 55.438995361328125 Porovnania: 324278 Priradenia: 166613
+Tree sort: 50.99797248840332 Porovnania: 313514 Priradenia: 161253
+Tree sort: 55.286407470703125 Porovnania: 319569 Priradenia: 164283
+
+Partially sorted
+[n = 10 000]
+Tree sort: 3.0896663665771484 Porovnania: 22255 Priradenia: 11577
+Tree sort: 3.007173538208008 Porovnania: 22376 Priradenia: 11633
+Tree sort: 3.2176971435546875 Porovnania: 22908 Priradenia: 11903
+Tree sort: 3.040790557861328 Porovnania: 21710 Priradenia: 11298
+Tree sort: 2.911090850830078 Porovnania: 21154 Priradenia: 11023
+
+[n = 100 000]
+Tree sort: 50.687551498413086 Porovnania: 290456 Priradenia: 149715
+Tree sort: 52.819252014160156 Porovnania: 322738 Priradenia: 165869
+Tree sort: 52.93631553649902 Porovnania: 323623 Priradenia: 166267
+Tree sort: 49.59917068481445 Porovnania: 303989 Priradenia: 156484
+Tree sort: 50.9953498840332 Porovnania: 295218 Priradenia: 152108
+
