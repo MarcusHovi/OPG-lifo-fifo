@@ -1,10 +1,10 @@
 package LinkedList;
 
-public class Node {
+public class Node_int {
     int value;
-    Node next;
+    Node_int next;
 
-    public Node( int value ) {
+    public Node_int( int value ) {
         this.value = value;
 //        this.next = null;
     }
@@ -25,11 +25,11 @@ public class Node {
         this.value = value;
     }
 
-    public Node getNext() {
+    public Node_int getNext() {
         return next;
     }
 
-    public void setNext(Node next) {
+    public void setNext( Node_int next ) {
         this.next = next;
     }
 }

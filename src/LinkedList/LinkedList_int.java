@@ -1,17 +1,17 @@
 package LinkedList;
 
-public class LinkedList {
-    private Node head;
+public class LinkedList_int {
+    private Node_int head;
     private int size;
 
-    public LinkedList() {
+    public LinkedList_int() {
         this.size = 0;
         this.head = null;
     }
 
-    public void prependNode(int value) {
+    public void prependNode( int value ) {
 
-        Node newNode = new Node(value);
+        Node_int newNode = new Node_int( value );
 
         if (head == null)
             head = newNode;
@@ -26,15 +26,15 @@ public class LinkedList {
         if (index > size || index < 0)
             return;
 
-        Node newNode = new Node(value);
+        Node_int newNode = new Node_int( value );
 
         if (head == null)
             head = newNode;
         else {
             int loop = 0;
-            Node previous = head;
-            for (Node i = head; i != null; i = i.next) {
-                if (loop == index) {
+            Node_int previous = head;
+            for ( Node_int i = head; i != null; i = i.next ) {
+                if ( loop == index ) {
                     newNode.next = i;
                     previous.next = newNode;
 
@@ -48,21 +48,21 @@ public class LinkedList {
     }
 
 
-    public void prependNodeByNode(Node node, int value) {
-        if (node == null)
+    public void prependNodeByNode( Node_int node, int value ) {
+        if ( node == null )
             return;
 
-        Node newNode = new Node(value);
+        Node_int newNode = new Node_int( value );
 
-        if (head == null)
+        if ( head == null )
             head = newNode;
-        else if (head == node) {
+        else if ( head == node ) {
             newNode.next = head;
             head = newNode;
         } else {
-            Node previous = head;
-            for (Node i = head; i != null; i = i.next) {
-                if (i == node) {
+            Node_int previous = head;
+            for ( Node_int i = head; i != null; i = i.next ) {
+                if ( i == node ) {
                     newNode.next = i;
                     previous.next = newNode;
                     break;
@@ -74,13 +74,13 @@ public class LinkedList {
     }
 
     public void appendNode(int value) {
-        Node newNode = new Node(value);
+        Node_int newNode = new Node_int( value );
 
         if (head == null)
             head = newNode;
 
         else {
-            Node i = head;
+            Node_int i = head;
             while (true) {
                 if (i.next == null) {
                     i.next = newNode;
@@ -92,17 +92,17 @@ public class LinkedList {
         size++;
     }
 
-    public void appendNodeByNode(Node node, int value) {
-        if (node == null)
+    public void appendNodeByNode( Node_int node, int value ) {
+        if ( node == null )
             return;
 
-        Node newNode = new Node(value);
+        Node_int newNode = new Node_int( value );
 
-        if (head == null) head = newNode;
+        if ( head == null ) head = newNode;
         else {
-            Node i = head;
-            while (true) {
-                if (i == null) break;
+            Node_int i = head;
+            while ( true ) {
+                if ( i == null ) break;
                 if (i == node) {
                     newNode.next = node.next;
                     node.next = newNode;
@@ -118,14 +118,14 @@ public class LinkedList {
         if (index > size || index < 0)
             return;
 
-        Node newNode = new Node(value);
+        Node_int newNode = new Node_int( value );
 
         if (head == null)
             head = newNode;
         else {
             int loop = 0;
-            for (Node i = head; i != null; i = i.next) {
-                if (loop == index) {
+            for ( Node_int i = head; i != null; i = i.next ) {
+                if ( loop == index ) {
                     i.next = newNode;
                     break;
                 }
@@ -141,8 +141,8 @@ public class LinkedList {
             return;
 
         int loop = 0;
-        for (Node i = head; i != null; i = i.next) {
-            if (loop == index) {
+        for ( Node_int i = head; i != null; i = i.next ) {
+            if ( loop == index ) {
                 i.value = value;
                 break;
             }
@@ -150,18 +150,18 @@ public class LinkedList {
         }
     }
 
-    public void changeValue(Node node, int value) {
-        if (node == null) return;
+    public void changeValue( Node_int node, int value ) {
+        if ( node == null ) return;
         node.value = value;
     }
 
-    public Node getNodeByIndex(int index) {
-        if (index > size || index < 0)
+    public Node_int getNodeByIndex( int index ) {
+        if ( index > size || index < 0 )
             return null;
 
         int loop = 0;
-        for (Node i = head; i != null; i = i.next) {
-            if (loop == index) {
+        for ( Node_int i = head; i != null; i = i.next ) {
+            if ( loop == index ) {
                 return i;
             }
             loop++;
@@ -169,20 +169,20 @@ public class LinkedList {
         return null;
     }
 
-    public Node getNode(int value) {
+    public Node_int getNode( int value ) {
 
-        for (Node i = head; i != null; i = i.next) {
-            if (i.value == value) return i;
+        for ( Node_int i = head; i != null; i = i.next ) {
+            if ( i.value == value ) return i;
         }
         return null;
     }
 
-    public int getIndex(Node node) {
-        if (node == null) return -1;
+    public int getIndex( Node_int node ) {
+        if ( node == null ) return -1;
 
         int loop = 0;
-        for (Node i = head; i != null; i = i.next) {
-            if (i == node) return loop;
+        for ( Node_int i = head; i != null; i = i.next ) {
+            if ( i == node ) return loop;
             loop++;
         }
         return -1;
@@ -190,14 +190,14 @@ public class LinkedList {
 
     public int getIndex(int value) {
         int loop = 0;
-        for (Node i = head; i != null; i = i.next) {
-            if (i.value == value) return loop;
+        for ( Node_int i = head; i != null; i = i.next ) {
+            if ( i.value == value ) return loop;
             loop++;
         }
         return -1;
     }
 
-    public int getLen(Node first) {
+    public int getLen() {
 //        int length = 0;
 //        for (Node i = first; i != null; i = i.next) {
 //            length++;
@@ -209,8 +209,8 @@ public class LinkedList {
     public void printNodes() {
 
 
-        for (Node i = head; i != null; i = i.next) {
-            System.out.println(i.value + " ");
+        for ( Node_int i = head; i != null; i = i.next ) {
+            System.out.println( i.value + " " );
         }
         // Alternative
 //        Node i = first;
@@ -221,19 +221,19 @@ public class LinkedList {
 
     }
 
-    public void removeNode(Node node) {
-        if (node == null) return;
+    public void removeNode( Node_int node ) {
+        if ( node == null ) return;
 
 
-        if (head == node) {
+        if ( head == node ) {
 
             head = head.next;
 
         } else {
 
-            Node previous = head;
-            for (Node i = head; i != null; i = i.next) {
-                if (node == i) {
+            Node_int previous = head;
+            for ( Node_int i = head; i != null; i = i.next ) {
+                if ( node == i ) {
                     previous.next = node.next;
                     node.next = null;
                     break;
@@ -253,10 +253,10 @@ public class LinkedList {
 
         } else {
 
-            Node previous = head;
-            Node i;
-            for (i = head; i != null; i = i.next) {
-                if (value == i.value) {
+            Node_int previous = head;
+            Node_int i;
+            for ( i = head; i != null; i = i.next ) {
+                if ( value == i.value ) {
                     previous.next = i.next;
                     i.next = null;
 
@@ -277,11 +277,11 @@ public class LinkedList {
             head = head.next;
 
         } else {
-            Node previous = head;
-            Node node = head;
-            for (int i = 0; i < size; i++) {
+            Node_int previous = head;
+            Node_int node = head;
+            for ( int i = 0; i < size; i++ ) {
 
-                if (index == i) {
+                if ( index == i ) {
                     previous.next = node.next;
                     node.next = null;
 
